@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <h1 class="fs-1 fw-bolder text-center text-capitalize  text-info">crud sestem</h1>
+    <div class="container py-5">
+        <div class="mb-3">
+            <label for="productName" class="mb-1">Product Name</label>
+            <input type="text" class="form-control" id="productName">
+
+            <div class="invalid-feedback my-2 " id="validNameId">
+                All letters must be lowercase, not less than three letters and not more than 15 letters
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="productPrice" class="mb-1">Product Price</label>
+            <input type="number" class="form-control" id="productPrice">
+            <div class="invalid-feedback my-2 " id="validprice">
+                The password must consist of numbers only, and the numbers must not exceed five digits
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="productCategory" class="mb-1">Product Category</label>
+            <input type="text" class="form-control" id="productCategory">
+        </div>
+        <div class="mb-3">
+            <label for="productDescription" class="mb-1">Product Description</label>
+            <textarea type="text" class="form-control " id="productDescription">
+                </textarea>
+        </div>
+
+        <!-- add and updet buttons -->
+        <button id="btn-add" onclick="addProduct() " class="btn btn-outline-primary">Add Product</button>
+        <button id="btn-Updet" onclick="addUpdet() " style="display: none;"
+            class="btn btn-outline-primary">Updet</button>
+
+
+        <!-- search input  -->
+        <input type="text" name="" id="searchInput" onkeyup="search()" class="form-control my-5 w-50 mx-auto"
+            placeholder="Search....">
+        <!-- section Table -->
+        <table class="table table-striped">
+            <thead>
+                <th>index</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>productCategory</th>
+                <th>productDescription</th>
+                <th>update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
